@@ -1,7 +1,23 @@
-class Comment {
-  constructor(message) {
-    this.message = message;
-  }
-}
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
-module.exports = Comment;
+const CommentSchema = new Schema({
+  comment: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  org: {
+    type: String,
+    required: true
+  },
+  deleted: {
+    type: Boolean,
+    default: 0
+  }
+})
+
+module.exports = Comment = mongoose.model('comment', CommentSchema)

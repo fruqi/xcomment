@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const GithubRepository = require('../repository/GithubRepository');
-const memberRepository = new GithubRepository();
+const GithubMemberRepository = require('../repository/github/GithubMemberRepository');
+const memberRepository = new GithubMemberRepository();
 
 
 router.get("/", (req, res) => {

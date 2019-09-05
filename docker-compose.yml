@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  app:
+    container_name: xcomment-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5000:3000'
+    links:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/xcomment
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
