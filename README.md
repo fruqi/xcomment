@@ -21,7 +21,7 @@ docker-compose build
 > POST /orgs/:orgname/comments
   * Submit a comment to a particular organization
 
-> GET /orgs/:orgname>/comments
+> GET /orgs/:orgname/comments
   * Return all comments from a particular organization
 
 > DELETE /orgs/:orgname/comments
