@@ -18,14 +18,14 @@ docker-compose build
 
 ## Available Endpoints
 
-> POST /orgs/<org-name>/comments
+> POST /orgs/:orgname/comments
   * Submit a comment to a particular organization
 
-> GET /orgs/<org-name>/comments
+> GET /orgs/:orgname>/comments
   * Return all comments from a particular organization
 
-> DELETE /orgs/<org-name>/comments
+> DELETE /orgs/:orgname/comments
   * (Soft) Delete all comments associated with a particular organization
 
-> GET /orgs/<org-name>/members
+> GET /orgs/:orgname/members
   * Return all members of an organization and sorted by the number of followers in descending order
