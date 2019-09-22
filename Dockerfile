@@ -10,8 +10,6 @@ WORKDIR /var/www
 
 RUN npm install
 
-VOLUME [ "/var/www" ]
-
 EXPOSE $PORT
 
 ENTRYPOINT [ "npm", "start" ]

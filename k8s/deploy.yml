@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: xcomment
+  name: xcomment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: xcomment
+  template:
+    metadata:
+      labels:
+        run: xcomment
+    spec:
+      containers:
+      - name: xcomment-pod
+        image: gcr.io/xcomment/xcomment-image:latest
+        ports:
+        - containerPort: 3000
+
+
+
+
