@@ -17,9 +17,21 @@ spec:
       containers:
       - name: xcomment-pod
         image: gcr.io/xcomment/xcomment-image:latest
+        env:
+          - name: MONGO_URL
+            value: "mongodb://34.80.190.166:32017/xcomment"
         ports:
         - containerPort: 3000
-
-
-
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: xcomment-svc
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+    nodePort: 30005
+    protocol: TCP
+  selector:
+    run: xcomment
