@@ -19,7 +19,7 @@ spec:
         image: gcr.io/xcomment/xcomment-image:latest
         env:
           - name: MONGO_URL
-            value: "mongodb://34.80.190.166:32017/xcomment"
+            value: "mongodb://34.80.190.166:32017,34.80.125.39:32017,35.194.222.87:32017/xcomment"
         ports:
         - containerPort: 3000
 ---
